@@ -20,9 +20,9 @@ echo " "
 echo -e "\033[36m--- Download config files---\033[0m"
 echo " "
 curl -o init.sh https://raw.githubusercontent.com/luckysphere07/connectnuclias/refs/heads/master/init.sh
-curl -o docker-compose.yml https://raw.githubusercontent.com/nuclias-connect/connect/dev/docker-compose.yml
-curl -o entrypoint-initdb.sh https://raw.githubusercontent.com/nuclias-connect/connect/dev/entrypoint-initdb.sh
-curl -o appconfig.json https://raw.githubusercontent.com/nuclias-connect/connect/dev/appconfig.json
+curl -o docker-compose.yml https://raw.githubusercontent.com/luckysphere07/connectnuclias/refs/heads/master/docker-compose.yml
+curl -o entrypoint-initdb.sh https://raw.githubusercontent.com/luckysphere07/connectnuclias/refs/heads/master/entrypoint-initdb.sh
+curl -o appconfig.json https://raw.githubusercontent.com/luckysphere07/connectnuclias/refs/heads/master/appconfig.json
 if [ ! -d $TMP_NUCLIAS_CONNECT_config ];then
   mkdir -p $TMP_NUCLIAS_CONNECT_config
 fi
@@ -33,3 +33,5 @@ echo -e "\033[32m--- Download Complete\033[0m"
 echo " "
 
 sudo sh init.sh $name $pwd1
+
+https://raw.githubusercontent.com/luckysphere07/connectnuclias/refs/heads/master/init.sh
