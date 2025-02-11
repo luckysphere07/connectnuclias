@@ -9,12 +9,12 @@ if %hasdocker% equ 1 (
 	goto end
 	)
 
-echo start check docker-compose...
-for /f "delims=:" %%t in ('docker-compose -v ^| find /C /I "docker-compose version"') do set hascompose=%%t
+echo start check docker compose...
+for /f "delims=:" %%t in ('docker compose -v ^| find /C /I "docker compose version"') do set hascompose=%%t
 if %hasdocker% equ 1 (
-	echo docker-compose had installed
+	echo docker compose had installed
 	) else (
-	echo not found docker-compose.  please install docker-compose before
+	echo not found docker compose.  please install docker compose before
 	goto end
 	)
 
@@ -115,14 +115,14 @@ echo --
 echo -
 echo all is ready. start run cwm-service
 
-docker-compose up -d
+docker compose up -d
 
 echo welcome use CWM server. 
 echo                you can availabe on https://localhost:30001
 echo -- command list -------------------
 echo ^|                                  ^|     
-echo ^|    start: docker-compose up -d   ^|
-echo ^|    stop : docker-compose down    ^|
+echo ^|    start: docker compose up -d   ^|
+echo ^|    stop : docker compose down    ^|
 echo ^|                                  ^|
 echo -----------------------------------   
 
