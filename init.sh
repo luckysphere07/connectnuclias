@@ -104,12 +104,12 @@ check_docker_compose=`docker compose -v`
 if [ "$check_docker_compose" ]
 	then echo "$check_docker_compose"
 else
-	# echo "start install docker-compose"
+	# echo "start install docker compose"
 	echo "not found docker compose"
 	exit 1
 	# @ todo install docker compose
 fi
-echo -e "\033[32mdocker-compose installed\033[0m"
+echo -e "\033[32mdocker compose installed\033[0m"
 
 echo -e "\033[36m(4/8)---- check docker status ----\033[0m"
 check_docker_status=`ps -fe | grep dockerd | wc -l`
@@ -207,13 +207,13 @@ if [ -n "$name" ]; then
   fi
 fi
 
-docker-compose up -d
+docker compose up -d
 echo -e "\033[32mNuclias Connect services are running...\033[0m"
 echo ""
 echo "-- commands list -----------------------"
 echo "|                                       |"
-echo -e "|  start: \033[32mdocker-compose up -d\033[0m          |"
-echo -e "|  stop:: \033[32mdocker-compose down\033[0m           |"
+echo -e "|  start: \033[32mdocker compose up -d\033[0m          |"
+echo -e "|  stop:: \033[32mdocker compose down\033[0m           |"
 echo "|                                       |"
 echo " ----------------------------------------"
 exit 0
